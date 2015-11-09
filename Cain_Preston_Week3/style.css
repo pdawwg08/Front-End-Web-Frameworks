@@ -1,0 +1,17 @@
+body {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+.pure-form{
+    display: inline-block;
+    float: left;
+    margin-bottom: 40px;
+    margin-right: 40px;
+}
+th {
+    background-color: lightgrey;
+}
+table{
+    float: left;
+}

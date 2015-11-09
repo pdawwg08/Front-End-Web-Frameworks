@@ -1,0 +1,48 @@
+<div ng-controller="EmployeeEditCtrl">
+<h2>Add an Entry</h2>
+    <form class="pure-form pure-form-aligned">
+        <div class="pure-control-group">
+            <label>Employee:</label>
+            <input type="text" ng-model="Employee"/>
+        </div>
+        <div class="pure-control-group">
+            <label>Street:</label>
+            <input type="text" ng-model="Street"/>
+        </div>
+        <div class="pure-control-group">
+            <label>City:</label>
+            <input type="text" ng-model="City"/>
+        </div>
+        <div class="pure-control-group">
+            <label>State:</label>
+            <input type="text" ng-model="State"/>
+        </div>
+        <div class="pure-control-group">
+            <label>Zip Code:</label>
+            <input type="text" ng-model="ZipCode"/>
+        </div>
+        <div class="pure-controls">
+            <input type="submit" ng-click="editItem()" value="Edit Entry" class="pure-button pure-button-primary"/>
+        </div>
+    </form>
+    <table class="pure-table pure-table-horizontal">
+        <tr>
+            <th>Employee</th>
+            <th>Street</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Zip Code</th>
+            <th></th>
+            <th>Delete</th>
+        </tr>
+        <tr ng-repeat="item in itemArray track by $index">
+            <td>{{item.Employee}}</td>
+            <td>{{item.Street}}</td>
+            <td>{{item.City}}</td>
+            <td>{{item.State}}</td>
+            <td>{{item.ZipCode}}</td>
+            <td><a href="/employees/{{employeeId}}/edit">Edit</a></td>
+            <td><button ng-click="deleteItem(item)" class="pure-button">X</button></td>
+        </tr>
+    </table>
+</div>

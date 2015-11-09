@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Reveal</title>
+
+		<meta name="description" content="A test presentation for reveal.js">
+		<meta name="author" content="Ray Villalobos">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/ray.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/solarized_light.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<div class="slides">
+
+				<section><!-------------------------- slide ------------------------>
+					<h1>Sample Presentation</h1>
+					<h3>HTML Presentations Made Easy</h3>
+					<p>
+						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
+					</p>
+				</section>
+
+
+				<section data-transition="zoom"><!-------------------------- slide ------------------------>
+					<h2>Second Slide</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, ipsa ipsum hic qui tenetur rem magni quibusdam officia laudantium doloribus vel quae. Esse, commodi, earum ex maiores cupiditate doloribus debitis.</p>
+					<a href="http://iviewsource.com">iViewSource</a>
+				</section>
+
+				<section id="edgeanimation">
+					<p class="clientserver"></p>
+					<ul>
+						<li class="fragment">Client</li>
+						<li class="fragment" id="server">Server</li>
+					</ul>
+				</section>
+
+				<section><!-------------------------- slide ------------------------>
+					<h2>Grocery List</h2>
+						<p><input type="text" id="myField" name="myName"></p>
+						<ol class="sortable">
+							<li class="fragment">Lunchmeat</li>
+							<li class="fragment">Fruit</li>
+							<li class="fragment" id="populate">Dairy</li>
+							<li class="fragment">Coffee</li>
+						</ol>
+				</section>
+
+				<section>
+					<section data-autoslide="3000" id="photos">
+						<h2>San Francisco</h2>
+						<img data-fragment-index="1" src="images/skyline.jpg" alt="Skyline photo from Treasure Island">
+
+						<p>Places to visit: <br>
+							<small>
+								<a href="#/photo_bridge">Golden Gate Bridge</a>, 
+								<a href="#/photo_bay">San Francisco Bay</a>, 
+								<a href="#/photo_cityhall">City Hall</a>, 
+								<a href="#/photo_fort">Fort Point</a>
+								<br>(photos below)</small>
+						</p>
+
+						<p><a href="?theme=moon#/photos">moon</a></p>
+
+						<div class="navigate-down" style="cursor: pointer;"><img src="images/arrow_down.png" style="border: none; background:none; box-shadow:none;" alt="Arrow Down"></div>
+					</section>
+
+					<section data-state="slideshow" id="photo_bridge" data-background="images/bridge.jpg">
+						<h2 style="position:relative; top:300px;">Golden Gate Bridge</h2>
+					</section>
+
+					<section data-state="slideshow" id="photo_bay" data-background="images/bay.jpg">
+						<h2 style="position:relative; top:300px;">San Francisco Bay</h2>
+					</section>
+
+					<section data-state="slideshow" id="photo_cityhall" data-background="images/cityhall.jpg">
+						<h2 style="position:relative; top:300px;">City Hall</h2>
+					</section>
+
+					<section data-state="slideshow" id="photo_fort" data-background="images/fort.jpg">
+						<h2 style="position:relative; top:300px;">Fort Point</h2>
+					</section>
+				</section>
+
+				<section>
+					<h2>Quotes</h2>
+					<p><q>“Let's go!”</q> said the president.</p>
+					<blockquote>“I can't believe it's not butter” <br><small>--Fabio</small></blockquote>
+				</section>
+
+				<section><!-------------------------- slide ------------------------>
+					<h2>Code Sample</h2>
+
+					<p>Use the <code>&lt;code&gt;</code></p>
+
+					<pre><code data-trim>
+&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+	&lt;meta charset=&quot;UTF-8&quot;&gt;
+	&lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	
+&lt;/body&gt;
+&lt;/html&gt;
+					</code></pre>
+				</section>
+
+			</div><!-- slides -->
+		</div><!-- reveal -->
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: false,
+				history: true,
+				center: true,
+				rollingLinks: false,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+				transitionSpeed: 'slow',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { 
+						hljs.tabReplace = '<span class="tabindent">\t</span>';// replace tabs with spaces
+						hljs.initHighlightingOnLoad(); 
+					} },
+					{src: 'http://code.jquery.com/jquery-1.9.1.js'},
+					{src: 'http://code.jquery.com/ui/1.10.3/jquery-ui.js', callback: function() {
+					  $(function() {
+					    $( ".sortable" ).sortable();
+					  });
+					}},
+					{src: 'clientserver_edgePreload.js', ascync: true},
+
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+		<script>
+			Reveal.addEventListener('fragmentshown', function(event) {
+				if (event.fragment.id==='populate') {
+					document.querySelector("#myField").value="Don't forget"
+				}
+
+				if (event.fragment.id==='server') {
+					AdobeEdge.getComposition("clientserver").getStage().play("continue");
+				}
+
+			});
+
+			Reveal.addEventListener('slidechanged', function() {
+				if (event.currentSlide.id==='edgeanimation') {
+					AdobeEdge.getComposition("clientserver").getStage().play("start");
+				}
+			});
+		</script>
+	</body>
+</html>
